@@ -1,0 +1,107 @@
+.main {
+  height: 100vh;
+  overflow: hidden;
+  font-family: Verdana;
+
+
+  .main-background {
+    background-color: #fbf9ed;
+    display: flex;
+    justify-content: space-around;
+    height: 100vh;
+    position: relative;
+    width: 110%;
+
+    &_line {
+      height: 170%;
+      margin: -20% 70px 0 30px;
+      width: 4%;
+      background-color: #efe5cca6;
+      transform: rotate(-20deg);
+
+      &_1 {
+        animation: appear 1s ease-in-out;
+      }
+
+      &_2 {
+        animation: appear 1.5s ease-in-out;
+      }
+
+      &_3 {
+        animation: appear 2s ease-in-out;
+      }
+
+      &_4 {
+        animation: appear 2.5s ease-in-out;
+      }
+
+      &_5 {
+        animation: appear 3s ease-in-out;
+      }
+
+      &_6 {
+        animation: appear 3.5s ease-in-out;
+      }
+
+      &_7 {
+        animation: appear 4s ease-in-out;
+      }
+
+      &_8 {
+        animation: appear 4.5s ease-in-out;
+      }
+
+      &_9 {
+        animation: appear 5s ease-in-out;
+      }
+
+      &_10 {
+        animation: appear 5.25s ease-in-out;
+      }
+
+      &_11 {
+        animation: appear 5.5s ease-in-out;
+      }
+    }
+
+    .main-text {
+      font-family: 'Share Tech Mono', monospace;
+      position: absolute;
+      top: 35%;
+      left: 15%;
+      opacity: 1;
+      color: #6d1e1e;
+      font-size: 102px;
+      animation: main-text-load 2s ease-in-out;
+
+
+    }
+
+    p {
+      font-size: 30px;
+      margin-left: 60%;
+      color: #ff056b;
+      animation: text-load 2s ease-in-out;
+    }
+
+  }
+
+  .main-background-night {
+    background-color: black;
+
+    .main-background_line {
+      background-color: #c32aff;
+    }
+
+    .main-text {
+      text-shadow: 1px -1px 2px #703e8a;
+    }
+  }
+}
+@media screen and (max-width: 576px) and (min-width: 300px) {
+  .main-text {
+    left: 7%;
+  }
+}
+
+
