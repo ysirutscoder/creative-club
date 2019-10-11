@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head></head>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
   <body>
     <link rel="stylesheet" href="css/style.min.css">
     <section class="main">
@@ -19,11 +21,30 @@
         <div class="main-text">Creative Coders
           <p>Start crate with us</p>
         </div>
-        <label class="switch">
-          <input type="checkbox"><span class="slider round"></span>
-        </label>
       </div>
     </section>
+    <nav class="navbar">
+      <div class="navbar__inner">
+        <div class="navbar__left-side"> 
+          <h1 class="navbar__logo">CC</h1>
+        </div>
+        <ul class="navbar__right-side">
+          <li class="navbar__item">Home</li>
+          <li class="navbar__item">About us</li>
+          <li class="navbar__item">Our projects</li>
+          <li class="navbar__item">Contact</li>
+        </ul>
+        <div class="navbar__hamburger"><span></span><span></span><span></span></div>
+      </div>
+      <div class="navbar__mobile">
+        <ul>
+          <li>Home</li>
+          <li>About us</li>
+          <li>Our projects</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+    </nav>
     <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/main.js"></script>
   </body>
