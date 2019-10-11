@@ -69,19 +69,19 @@
     .main-text {
       @include font-stm;
       position: absolute;
+      margin: 0;
       top: 35%;
       left: 15%;
       opacity: 1;
       color: #6d1e1e;
       font-size: 102px;
       animation: main-text-load 2s ease-in-out;
-
-
     }
 
     p {
       font-size: 30px;
       margin-left: 60%;
+      margin-top: 30px;
       color: #ff056b;
       animation: text-load 2s ease-in-out;
     }
@@ -97,6 +97,24 @@
 
     .main-text {
       text-shadow: 1px -1px 2px #703e8a;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .main-text {
+    p {
+      margin-left: 30%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-text {
+    font-size: 26px;
+
+    p {
+      margin-left: 30%;
     }
   }
 }
