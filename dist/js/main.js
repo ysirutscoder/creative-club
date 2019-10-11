@@ -2,10 +2,6 @@ $("span .slider .round").click(function () {
     $(".main-background").toggleClass("main-background-night");
 });
 
-$('.navbar__hamburger').click(() => {
-    $('.navbar__right-side').toggleClass('navbar__right-side--visible');
-});
-
 $(document).ready(function ($) {
 
     // init page
@@ -54,4 +50,8 @@ $(document).ready(function ($) {
         $('.services-circle__item').eq(rand).click();
         $('.services-action').addClass('show');
     }, 2000);
+});
+
+$('.navbar__hamburger').click(() => {
+    $('.navbar__right-side').toggleClass('navbar__right-side--visible');
 });
