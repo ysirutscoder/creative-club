@@ -55,3 +55,7 @@ $(document).ready(function($) {
         $('.services-action').addClass('show');
     }, 2000);
 });
+
+$('.navbar__hamburger').click(() => {
+    $('.navbar__right-side').toggleClass('navbar__right-side--visible');
+});

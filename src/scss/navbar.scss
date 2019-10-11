@@ -1,0 +1,151 @@
+@import "mixins/font-mixins.scss";
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  animation: navbar-load 2s ease-in-out;
+
+  &__inner {
+    @include font-stm;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  &__logo {
+    font-size: 68px;
+    margin: 0;
+
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__right-side {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 45%;
+    list-style-type: none;
+    font-size: 24px;
+    margin-right: 20px;
+    text-decoration: underline;
+  }
+
+  &__item {
+    transition: .3s ease all;
+    margin-right: 0;
+    text-align: center;
+    white-space: nowrap;
+
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.07);
+    }
+  }
+
+  &__hamburger {
+    display: none;
+    position: relative;
+    margin-right: 0;
+    height: 30px;
+    width: 35px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    & span {
+      height: 3px;
+      width: 100%;
+      position: absolute;
+      background-color: #000;
+      border-radius: 2px;
+
+      &:nth-child(1) {
+        top: 0;
+      }
+
+      &:nth-child(2) {
+        top: 10px;
+      }
+
+      &:nth-child(3) {
+        top: 20px;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1200px) {
+  .navbar {
+    &__right-side {
+      width: 50%;
+    }
+
+    &__item {
+      margin-right: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .navbar {
+    &__right-side {
+      margin-right: 10%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    &__right-side {
+      display: none;
+      text-decoration: none;
+
+      &--visible {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        right: 0;
+        top: 90px;
+        margin: 0;
+        color: #6d1f1f;
+        width: 100%;
+        padding-left: 0;
+        animation: mobile-navbar-load .5s ease-in-out;
+      }
+    }
+
+    &__item {
+      margin: 2px 0;
+      width: 100%;
+      padding: 5px 0;
+      // background-color: #f7096877;
+      background-color: #f4ecd9;
+
+      &::after {
+        content: "";
+        height: 1px;
+        background-color: transparent;
+        width: 100%;
+      }
+    }
+
+    &__hamburger {
+      display: block;
+    }
+  }
+}
+
+
+@media screen and (max-width: 576px) {}
