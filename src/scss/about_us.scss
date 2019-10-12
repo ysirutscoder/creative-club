@@ -1,40 +1,38 @@
-$small-screen: 991px;
+$small-screen: 791px;
 $extrasmall-screen: 767px;
 
 @mixin on-circle($item-count, $circle-size, $item-size) {
-    position: relative;
-    width:  $circle-size;
-    height: $circle-size;
-    padding: 0;
-    border-radius: 50%;
-    list-style: none;
+  position: relative;
+  width: $circle-size;
+  height: $circle-size;
+  padding: 0;
+  border-radius: 50%;
+  list-style: none;
 
-    > * {
-        display: block;
-        position: absolute;
-        top:  50%;
-        left: 50%;
-        width:  $item-size;
-        height: $item-size;
-        margin: -($item-size / 2);
-        opacity: 0;
-        z-index: 5;
+  >* {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: $item-size;
+    height: $item-size;
+    margin: -($item-size / 2);
+    opacity: 0;
+    z-index: 5;
 
-        $angle: (360 / $item-count);
-        $rot: 90;
+    $angle: (360 / $item-count);
+    $rot: 90;
 
-        @for $i from 1 through $item-count {
-            &:nth-of-type(#{$i}) {
-                transform:
-                        rotate($rot * 1deg)
-                        translate($circle-size / 2)
-                        rotate($rot * -1deg);
-                animation: rotating 1s 2s ease forwards;
-            }
+    @for $i from 1 through $item-count {
+      &:nth-of-type(#{$i}) {
+        transform:
+          rotate($rot * 1deg) translate($circle-size / 2) rotate($rot * -1deg);
+        animation: rotating 1s 2s ease forwards;
+      }
 
-            $rot: $rot + $angle;
-        }
+      $rot: $rot+$angle;
     }
+  }
 }
 
 
@@ -44,6 +42,8 @@ $extrasmall-screen: 767px;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  background-color: #fbf9ed;
 
   @media screen and (max-width: $small-screen) {
     padding-top: 0;
@@ -51,25 +51,33 @@ $extrasmall-screen: 767px;
 
   .container {
     position: relative;
+    height: 100%;
 
-    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @media all and (-ms-high-contrast: none),
+    (-ms-high-contrast: active) {
       max-width: none;
     }
+  }
+
+
+  .small-and-up {
+    height: 100%;
   }
 }
 
 .services-circle {
-  margin: 0 auto;
-  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   &::before {
     content: '';
     width: 100%;
     height: 100%;
     position: absolute;
-    z-index: -1;
+    z-index: 0;
     border-radius: 50%;
-    border: 1px solid #eee;
+    border: 1px solid #6d1f1f50;
     left: 0;
     top: 0;
     opacity: 0;
@@ -79,19 +87,20 @@ $extrasmall-screen: 767px;
   }
 
 
-  @include on-circle($item-count: 11, $circle-size: 50rem, $item-size: 4rem);
+  @include on-circle($item-count: 11, $circle-size: 35rem, $item-size: 3rem);
 
   @media screen and (max-width: $small-screen) {
     @include on-circle($item-count: 11, $circle-size: 48rem, $item-size: 4rem);
   }
 
   &__item {
+    opacity: 1;
 
     &::before {
       display: block;
       content: '';
-      width: 4rem;
-      height: 4rem;
+      width: 3rem;
+      height: 3rem;
       background: #E8E8E8;
       border-radius: 50%;
       transition: all .3s ease;
@@ -100,32 +109,30 @@ $extrasmall-screen: 767px;
     &:hover,
     &.active-item {
 
-      $backgrounds: (
-              1: #d7feac,
-              2: #f4c1ff,
-              3: #fe8ae5,
-              4: #fff8a7,
-              5: #a7d0ff,
-              6: #ffadb7,
-              7: #98fbe3,
-              8: #a0d17f,
-              9: #dfeeff,
-              10: #ffd289,
-              11: #b7ffef
-      );
+      $backgrounds: (1: #d7feac,
+          2: #f4c1ff,
+          3: #fe8ae5,
+          4: #fff8a7,
+          5: #a7d0ff,
+          6: #ffadb7,
+          7: #98fbe3,
+          8: #a0d17f,
+          9: #dfeeff,
+          10: #ffd289,
+          11: #b7ffef);
 
-      @each $i, $color in $backgrounds {
+      @each $i,
+      $color in $backgrounds {
 
         &:nth-of-type(#{$i}) {
           &::before {
-            background:  $color;
+            background: $color;
           }
         }
       }
 
       .services-circle__item-title {
-        //top: 2.5rem;
-        top: 4.5rem;
+        top: 3.5rem;
       }
 
       &.ready {
@@ -143,11 +150,12 @@ $extrasmall-screen: 767px;
 
 
   }
+
   &__item-title {
     position: absolute;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     left: 2rem;
-    top: 5.5rem;
+    top: 4rem;
     text-align: center;
     //min-width: 19rem;
     width: max-content;
@@ -156,7 +164,8 @@ $extrasmall-screen: 767px;
     line-height: 1.4;
     transform: translateX(-50%);
 
-    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @media all and (-ms-high-contrast: none),
+    (-ms-high-contrast: active) {
       font-size: 1.2rem;
     }
 
@@ -200,11 +209,11 @@ $extrasmall-screen: 767px;
   width: 0;
   height: 0;
   border-radius: 50%;
-  transition: all .3s cubic-bezier(.76,.62,.87,1.49);
+  transition: all .3s cubic-bezier(.76, .62, .87, 1.49);
 
   &.pump {
-    width: 30rem;
-    height: 30rem;
+    width: 21rem;
+    height: 21rem;
     opacity: 1;
 
     @media screen and (max-width: $small-screen + 1) {
@@ -222,8 +231,8 @@ $extrasmall-screen: 767px;
   margin: 0;
   padding: 0;
   list-style: none;
-  width: 27rem;
-  height: 17rem;
+  width: 16rem;
+  height: 12rem;
   border-radius: 50%;
 
   @media screen and (max-width: 991px) {
@@ -262,6 +271,7 @@ $extrasmall-screen: 767px;
     transform: scale(0.1);
     opacity: 0;
   }
+
   to {
     transform: scale(1);
     opacity: 1;
@@ -272,43 +282,54 @@ $extrasmall-screen: 767px;
   0% {
     opacity: .1;
   }
+
   5% {
     opacity: 1;
   }
+
   40% {
     -webkit-transform: translate(-52px) rotate(0deg);
     opacity: 1;
   }
+
   70% {
     -webkit-transform: translate(-91px) rotate(77deg);
     opacity: 1;
   }
+
   95% {
     opacity: 1;
   }
+
   100% {
     -webkit-transform: translate(-130px) rotate(77deg);
     opacity: 0;
   }
 }
+
 @keyframes tilt {
   0% {
     opacity: .1;
   }
+
   5% {
     opacity: 1;
   }
+
   40% {
     transform: translate(-52px) rotate(0deg);
     opacity: 1;
   }
+
   70% {
     transform: translate(-91px) rotate(77deg);
     opacity: 1;
   }
+
   95% {
     opacity: 1;
   }
+
   100% {
     transform: translate(-130px) rotate(77deg);
     opacity: 0;
@@ -320,9 +341,9 @@ $extrasmall-screen: 767px;
   position: absolute;
   left: 50%;
   top: 50%;
-  background: rgba(255,255,255, 0);
-  width: 30rem;
-  height: 30rem;
+  background: rgba(255, 255, 255, 0);
+  width: 21rem;
+  height: 21rem;
   transform: translate(-50%, -50%);
   text-align: center;
   border-radius: 50%;
@@ -342,7 +363,7 @@ $extrasmall-screen: 767px;
     z-index: 4;
 
     &:hover {
-      background: rgba(255,255,255, 0.9);
+      background: rgba(255, 255, 255, 0.9);
 
       .btn {
         opacity: 1;
@@ -357,14 +378,17 @@ $extrasmall-screen: 767px;
   .small-and-up {
     display: block;
   }
+
   .extra-small {
     display: none;
   }
 }
+
 @media screen and (max-width: $extrasmall-screen) {
   .small-and-up {
     display: none;
   }
+
   .extra-small {
     display: block;
     text-align: center;

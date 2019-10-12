@@ -1,8 +1,9 @@
 /* preloader */
 .over {
-  /*height: 100vh;
-  overflow: hidden;*/
+  // height: 100vh;
+  // overflow: hidden;
 }
+
 .stage {
   display: block;
   background-color: #fff;
@@ -94,43 +95,54 @@
   0% {
     opacity: .1;
   }
+
   5% {
     opacity: 1;
   }
+
   40% {
     -webkit-transform: translate(-52px) rotate(0deg);
     opacity: 1;
   }
+
   70% {
     -webkit-transform: translate(-91px) rotate(77deg);
     opacity: 1;
   }
+
   95% {
     opacity: 1;
   }
+
   100% {
     -webkit-transform: translate(-130px) rotate(77deg);
     opacity: 0;
   }
 }
+
 @keyframes tilt {
   0% {
     opacity: .1;
   }
+
   5% {
     opacity: 1;
   }
+
   40% {
     transform: translate(-52px) rotate(0deg);
     opacity: 1;
   }
+
   70% {
     transform: translate(-91px) rotate(77deg);
     opacity: 1;
   }
+
   95% {
     opacity: 1;
   }
+
   100% {
     transform: translate(-130px) rotate(77deg);
     opacity: 0;

@@ -1,5 +1,9 @@
 @import "mixins/font-mixins.scss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -7,6 +11,10 @@
   width: 100%;
   z-index: 1;
   animation: navbar-load 2s ease-in-out;
+
+  a {
+    color: unset;
+  }
 
   &__inner {
     @include font-stm;
