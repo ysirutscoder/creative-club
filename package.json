@@ -47,7 +47,8 @@
     "imagemin-jpegtran": "^5.0.2",
     "imagemin-optipng": "^5.1.1",
     "postcss-preset-env": "^6.6.0",
-    "sw-precache": "^5.2.0"
+    "sw-precache": "^5.2.0",
+    "vue": "^2.6.10"
   },
   "dependencies": {
     "gulp-scss": "^1.4.0",

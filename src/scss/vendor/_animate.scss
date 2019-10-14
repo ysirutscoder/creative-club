@@ -3679,3 +3679,25 @@
     top: 90px;
   }
 }
+
+@keyframes section-displaying {
+  0% {
+    margin-top: 100vh;
+
+  }
+
+  100% {
+    margin-top: 0;
+  }
+}
+
+@keyframes section-hiding {
+  0% {
+    margin-bottom: 0;
+
+  }
+
+  100% {
+    margin-bottom: 100vh
+  }
+}

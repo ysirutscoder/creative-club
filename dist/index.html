@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-  <body>
+  <body id="body">
     <link rel="stylesheet" href="css/style.min.css">
     <nav class="navbar">
       <div class="navbar__inner">
@@ -11,15 +11,15 @@
           <h1 class="navbar__logo">CC</h1>
         </div>
         <ul class="navbar__right-side">
-          <li class="navbar__item"> <a href="#main">Home</a></li>
-          <li class="navbar__item"><a href="#services">About us</a></li>
+          <li class="navbar__item" v-on:click.native="alert(1)">Home</li>
+          <li class="navbar__item" @click="changeState(1)">About us</li>
           <li class="navbar__item">Our projects</li>
           <li class="navbar__item">Contact</li>
         </ul>
         <div class="navbar__hamburger"><span></span><span></span><span></span></div>
       </div>
     </nav>
-    <section class="main" id="main">
+    <section class="section main shown-section" id="main" v-if="state===0">
       <div class="main-background">
         <div class="main-background_line main-background_line_1"></div>
         <div class="main-background_line main-background_line_2"></div>
@@ -38,7 +38,7 @@
         </div>
       </div>
     </section>
-    <section class="about_us all-services" id="services" data-section-id="3" data-section-name="Services" data-section-anchor="#services">
+    <section class="section about_us hidden-section all-services" id="services" data-section-id="3" v-else-if="state===2" data-section-name="Services" data-section-anchor="#services">
       <div class="container">
         <div class="small-and-up">
           <div class="all-services__item-circle"></div>
@@ -4423,6 +4423,7 @@
       </div>
     </section>
     <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

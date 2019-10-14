@@ -60,9 +60,44 @@ $('.navbar__hamburger').click(() => {
     $('.navbar__right-side').toggleClass('navbar__right-side--visible');
 });
 
-document.addEventListener('scroll', () => {
-    if ( scrollY > 0 ) {
-        $('.navbar__right-side').addClass('navbar__right-side--hidden');
-    }
-    else $('.navbar__right-side').removeClass('navbar__right-side--hidden');
-});
+// document.addEventListener('scroll', () => {
+//     if ( scrollY > 0 ) {
+//         $('.navbar__right-side').addClass('navbar__right-side--hidden');
+//     }
+//     else $('.navbar__right-side').removeClass('navbar__right-side--hidden');
+// });
+
+// let sections = document.querySelectorAll('.section');
+// let navItems = document.querySelectorAll('.navbar__item');
+
+// for ( let item in navItems ) {
+//     navItems[item].addEventListener('click', () => {
+//         let current;
+//         sections.forEach( section => {
+            
+//             if( section.classList.contains('shown-section')) current = section;
+//             section.classList.remove('shown-section');
+//             section.classList.add('hidden-section');
+//         });
+        
+//         setTimeout( () => {
+//             current.style.display = 'none';
+//         }, 800);
+//         sections[item].style.display = '';
+//         sections[item].classList.remove('hidden-section');
+//         sections[item].classList.add('shown-section');
+//     })
+// }
+
+let app = new Vue({
+    el: "#body",
+    data: {
+        state: 1,
+    },
+    methods: {
+        changeState: (e) => {
+            this.state = e;
+        }
+    },
+})
+

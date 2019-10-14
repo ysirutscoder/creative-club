@@ -1,9 +1,5 @@
 @import "mixins/font-mixins.scss";
 
-html {
-  scroll-behavior: smooth;
-}
-
 .navbar {
   position: fixed;
   top: 0;
@@ -11,10 +7,6 @@ html {
   width: 100%;
   z-index: 1;
   animation: navbar-load 2s ease-in-out;
-
-  &:hover {
-    opacity: 1 !important;
-  }
 
   a {
     color: unset;
