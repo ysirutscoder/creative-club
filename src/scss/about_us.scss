@@ -1,3 +1,5 @@
+@import 'mixins/font-mixins.scss';
+
 $small-screen: 791px;
 $extrasmall-screen: 767px;
 
@@ -163,6 +165,8 @@ $extrasmall-screen: 767px;
     cursor: pointer;
     line-height: 1.4;
     transform: translateX(-50%);
+    @include font-stm;
+    color: #fa0769;
 
     @media all and (-ms-high-contrast: none),
     (-ms-high-contrast: active) {
@@ -248,19 +252,25 @@ $extrasmall-screen: 767px;
       transition: all .3s ease;
       z-index: 2;
       position: relative;
+
+      span {
+        @include font-stm;
+        font-size: 1.3rem;
+
+      }
     }
 
     &-time {
       opacity: 0;
       position: absolute;
       left: 50%;
-      bottom: -9rem;
+      bottom: -10rem;
       transform: translateX(-50%);
       transition: all .3s cubic-bezier(0.0, 0.0, 0.2, 1);
 
       &.show {
         opacity: 1;
-        bottom: -7rem;
+        bottom: -8rem;
       }
     }
   }
@@ -357,6 +367,23 @@ $extrasmall-screen: 767px;
     transform: translate(-50%, -100%);
     opacity: 0;
     transition: all .3s ease;
+    text-decoration: none;
+    color: #fff;
+    background-color: #fa0769;
+    padding: 1.3rem 2rem;
+    @include font-stm;
+    font-size: 1.3rem;
+
+    &:hover {
+      top: 48%;
+      box-shadow: 0 2px 6px rgb(0, 0, 0);
+    }
+
+    &:active {
+      top: 50%;
+      box-shadow: none;
+    }
+
   }
 
   &.show {

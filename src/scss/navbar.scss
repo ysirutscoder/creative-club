@@ -12,6 +12,10 @@ html {
   z-index: 1;
   animation: navbar-load 2s ease-in-out;
 
+  &:hover {
+    opacity: 1 !important;
+  }
+
   a {
     color: unset;
   }
@@ -45,6 +49,11 @@ html {
     font-size: 24px;
     margin-right: 20px;
     text-decoration: underline;
+    transition: .4s ease-in all;
+
+    &--hidden {
+      opacity: 0;
+    }
   }
 
   &__item {

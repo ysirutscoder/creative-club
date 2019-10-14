@@ -55,3 +55,9 @@ $(document).ready(function ($) {
 $('.navbar__hamburger').click(() => {
     $('.navbar__right-side').toggleClass('navbar__right-side--visible');
 });
+
+document.addEventListener('scroll', () => {
+    if (scrollY > 0) {
+        $('.navbar__right-side').addClass('navbar__right-side--hidden');
+    } else $('.navbar__right-side').removeClass('navbar__right-side--hidden');
+});
