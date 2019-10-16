@@ -66,14 +66,12 @@ var slider = function (sliderElement) {
     var touchStopPos = 0;
     var touchMinLength = 90;
     document.addEventListener('touchstart', function (e) {
-      e.preventDefault();
       if (e.type == 'touchstart' || e.type == 'touchmove' || e.type == 'touchend' || e.type == 'touchcancel') {
         var touch = e.touches[0] || e.changedTouches[0];
         touchStartPos = touch.pageY;
       }
     });
     document.addEventListener('touchend', function (e) {
-      e.preventDefault();
       if (e.type == 'touchstart' || e.type == 'touchmove' || e.type == 'touchend' || e.type == 'touchcancel') {
         var touch = e.touches[0] || e.changedTouches[0];
         touchStopPos = touch.pageY;

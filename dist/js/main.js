@@ -1,6 +1,6 @@
-$("span .slider .round").click(function () {
-    $(".main-background").toggleClass("main-background-night");
-});
+// $("span .slider .round").click(function () {
+//     $(".main-background").toggleClass("main-background-night")
+// });
 
 $(document).ready(function ($) {
 
@@ -49,63 +49,18 @@ $(document).ready(function ($) {
     }, 2000);
 });
 
-$('.navbar__hamburger').click(() => {
+$('.navbar__hamburger').click(e => {
+    e.preventDefault();
     $('.navbar__right-side').toggleClass('navbar__right-side--visible');
 });
-
-// document.addEventListener('scroll', () => {
-//     if ( scrollY > 0 ) {
-//         $('.navbar__right-side').addClass('navbar__right-side--hidden');
-//     }
-//     else $('.navbar__right-side').removeClass('navbar__right-side--hidden');
-// });
-
-// let sections = document.querySelectorAll('.section');
-// let navItems = document.querySelectorAll('.navbar__item');
-
-// for ( let item in navItems ) {
-//     navItems[item].addEventListener('click', () => {
-//         let current;
-//         sections.forEach( section => {
-
-//             if( section.classList.contains('shown-section')) current = section;
-//             section.classList.remove('shown-section');
-//             section.classList.add('hidden-section');
-//         });
-
-//         setTimeout( () => {
-//             current.style.zIndex = '1';
-
-//         sections[item].style.zIndex = '10';
-//         }, 800);
-
-
-//         sections[item].classList.remove('hidden-section');
-//         sections[item].classList.add('shown-section');
-//     })
-// }
-
-
-// let app = new Vue({
-//     el: "#body",
-//     data: {
-//         state: 0,
-//     },
-//     methods: {
-//         changeState: (e) => {
-//             console.log(this.state);
-//             this.state = e;
-//         }
-//     },
-// })
 
 let mySlider = slider('.slides');
 
 let navItems = document.querySelectorAll('.navbar__item');
+let passiveIfSupported = false;
 
 for (let id = 0; id < navItems.length; id++) {
-    document.querySelectorAll('.navbar__item')[id].addEventListener('click', e => {
-        e.preventDefault();
+    document.querySelectorAll('.navbar__item')[id].addEventListener('click', () => {
         mySlider.gotoSlide('#slide' + id);
-    });
+    }, { passive: false });
 }
