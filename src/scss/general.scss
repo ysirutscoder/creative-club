@@ -5,15 +5,39 @@ body {
     margin: 0;
 }
 
-// .section {
-//     // opacity: 0;
+// section {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100vw;
+//     height: 100vh;
+//     margin: 0;
+//     padding: 0;
+
+//     // &:nth-last-child(1) {
+//     //     z-index: 1;
+//     // }
+
+//     // &:nth-last-child(2) {
+//     //     z-index: 2;
+//     // }
+
+//     // &:nth-last-child(3) {
+//     //     z-index: 3;
+//     // }
+
+//     // &:nth-last-child(4) {
+//     //     z-index: 4;
+//     // }
 // }
 
+
 // .shown-section {
-//     display: block;
 //     animation: section-displaying .8s ease-in-out .4s;
+//     z-index: 10;
 // }
 
 // .hidden-section {
 //     animation: section-hiding .8s ease-in-out;
+//     z-index: 1;
 // }

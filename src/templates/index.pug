@@ -8,13 +8,14 @@ block header
 
 block content
     include sections/navbar
-    include sections/main
-    include sections/about_us
+    .slides 
+        include sections/main
+        include sections/about_us
 
 
 block scripts
     script(src="js/jquery-2.1.1.min.js")
-    script(src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js")
+    script(src="js/slider.js")
     script(src="js/main.js")
     
 

@@ -4,11 +4,6 @@ $("span .slider .round").click(function () {
 
 $(document).ready(function($) {
 
-
-    // init page
-
-
-
     var circle = $('.all-services__item-circle');
     var allItems = $('.services-circle__item');
     var allImages = $('.services-images__item');
@@ -81,23 +76,38 @@ $('.navbar__hamburger').click(() => {
 //         });
         
 //         setTimeout( () => {
-//             current.style.display = 'none';
+//             current.style.zIndex = '1';
+            
+//         sections[item].style.zIndex = '10';
 //         }, 800);
-//         sections[item].style.display = '';
+
+        
 //         sections[item].classList.remove('hidden-section');
 //         sections[item].classList.add('shown-section');
 //     })
 // }
 
-let app = new Vue({
-    el: "#body",
-    data: {
-        state: 1,
-    },
-    methods: {
-        changeState: (e) => {
-            this.state = e;
-        }
-    },
-})
 
+// let app = new Vue({
+//     el: "#body",
+//     data: {
+//         state: 0,
+//     },
+//     methods: {
+//         changeState: (e) => {
+//             console.log(this.state);
+//             this.state = e;
+//         }
+//     },
+// })
+
+let mySlider = slider('.slides');
+
+let navItems = document.querySelectorAll('.navbar__item');
+
+for ( let id = 0; id < navItems.length; id++ ) {
+    document.querySelectorAll('.navbar__item')[id].addEventListener('click',  e => {
+        e.preventDefault();
+        mySlider.gotoSlide('#slide' + id);
+    });
+}

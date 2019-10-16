@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-  <body id="body">
+  <body>
     <link rel="stylesheet" href="css/style.min.css">
     <nav class="navbar">
       <div class="navbar__inner">
@@ -11,78 +11,79 @@
           <h1 class="navbar__logo">CC</h1>
         </div>
         <ul class="navbar__right-side">
-          <li class="navbar__item" v-on:click.native="alert(1)">Home</li>
-          <li class="navbar__item" @click="changeState(1)">About us</li>
+          <li class="navbar__item">Home</li>
+          <li class="navbar__item">About us</li>
           <li class="navbar__item">Our projects</li>
           <li class="navbar__item">Contact</li>
         </ul>
         <div class="navbar__hamburger"><span></span><span></span><span></span></div>
       </div>
     </nav>
-    <section class="section main shown-section" id="main" v-if="state===0">
-      <div class="main-background">
-        <div class="main-background_line main-background_line_1"></div>
-        <div class="main-background_line main-background_line_2"></div>
-        <div class="main-background_line main-background_line_3"></div>
-        <div class="main-background_line main-background_line_4"></div>
-        <div class="main-background_line main-background_line_5"></div>
-        <div class="main-background_line main-background_line_6"></div>
-        <div class="main-background_line main-background_line_7"></div>
-        <div class="main-background_line main-background_line_8"></div>
-        <div class="main-background_line main-background_line_9"></div>
-        <div class="main-background_line main-background_line_10"></div>
-        <div class="main-background_line main-background_line_11"></div>
-        <div class="main-text"> 
-          <h2>Creative Coders</h2>
-          <p>Start crate with us</p>
+    <div class="slides"> 
+      <section class="section main shown-section" id="slide0">
+        <div class="main-background">
+          <div class="main-background_line main-background_line_1"></div>
+          <div class="main-background_line main-background_line_2"></div>
+          <div class="main-background_line main-background_line_3"></div>
+          <div class="main-background_line main-background_line_4"></div>
+          <div class="main-background_line main-background_line_5"></div>
+          <div class="main-background_line main-background_line_6"></div>
+          <div class="main-background_line main-background_line_7"></div>
+          <div class="main-background_line main-background_line_8"></div>
+          <div class="main-background_line main-background_line_9"></div>
+          <div class="main-background_line main-background_line_10"></div>
+          <div class="main-background_line main-background_line_11"></div>
+          <div class="main-text"> 
+            <h2>Creative Coders</h2>
+            <p>Start crate with us</p>
+          </div>
         </div>
-      </div>
-    </section>
-    <section class="section about_us hidden-section all-services" id="services" data-section-id="3" v-else-if="state===2" data-section-name="Services" data-section-anchor="#services">
-      <div class="container">
-        <div class="small-and-up">
-          <div class="all-services__item-circle"></div>
-          <ul class="services-circle">
-            <li class="services-circle__item" data-color="#d7feac">
-              <div class="services-circle__item-title" itemprop="makesOffer">Server Environment<span class="block">Securing and Customization</span></div>
-            </li>
-            <li class="services-circle__item" data-color="#f4c1ff">
-              <div class="services-circle__item-title" itemprop="makesOffer">Marketo/HubSpot<span class="block">Integration</span></div>
-            </li>
-            <li class="services-circle__item" data-color="#fe8ae5">
-              <div class="services-circle__item-title" itemprop="makesOffer">Site<span class="block">Internationalization</span></div>
-            </li>
-            <li class="services-circle__item" data-color="#fff8a7">
-              <div class="services-circle__item-title" itemprop="makesOffer">Marketo/HubSpot<span class="block">Email Templates</span></div>
-            </li>
-            <li class="services-circle__item" data-color="#a7d0ff">
-              <div class="services-circle__item-title" itemprop="makesOffer">Full Website<span class="block">Rebuild</span></div>
-            </li>
-            <li class="services-circle__item" data-color="#ffadb7">
-              <div class="services-circle__item-title" itemprop="makesOffer">Full Site Migration<span class="block">to New Server</span></div>
-            </li>
-            <li class="services-circle__item" data-color="#98fbe3">
-              <div class="services-circle__item-title" itemprop="makesOffer">CMS<span class="block">Customisation</span></div>
-            </li>
-            <li class="services-circle__item" data-color="#a0d17f">
-              <div class="services-circle__item-title" itemprop="makesOffer">Marketo/HubSpot<span class="block">Landing Pages</span></div>
-            </li>
-            <li class="services-circle__item" data-color="#dfeeff">
-              <div class="services-circle__item-title" itemprop="makesOffer">New Webpage<span class="block">Implementation</span></div>
-            </li>
-            <li class="services-circle__item" data-color="#ffd289">
-              <div class="services-circle__item-title" itemprop="makesOffer">WordPress Plugin<span class="block">Customization</span></div>
-            </li>
-            <li class="services-circle__item" data-color="#b7ffef">
-              <div class="services-circle__item-title" itemprop="makesOffer">Custom Script<span class="block">Creations</span></div>
-            </li>
-          </ul>
-          <ul class="services-images">
-            <li class="services-images__item">
-              <div class="services-images__item-wrapper"><img src="../../img/services-images/first-service.svg"><span class="services-images__item-time">4+ Hours</span></div>
-            </li>
-            <li class="services-images__item">
-              <div class="services-images__item-wrapper"><svg class="enliven" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 322 221" enable-background="new 0 0 322 221" xml:space="preserve" data-global-elvn="enableViewport, disableClick, none, startInvisible, notResponsive, 500, notLoop, 500">
+      </section>
+      <section class="section about_us hidden-section all-services" id="slide1" data-section-id="3" v-else-if="state===2" data-section-name="Services" data-section-anchor="#services">
+        <div class="container">
+          <div class="small-and-up">
+            <div class="all-services__item-circle"></div>
+            <ul class="services-circle">
+              <li class="services-circle__item" data-color="#d7feac">
+                <div class="services-circle__item-title" itemprop="makesOffer">Server Environment<span class="block">Securing and Customization</span></div>
+              </li>
+              <li class="services-circle__item" data-color="#f4c1ff">
+                <div class="services-circle__item-title" itemprop="makesOffer">Marketo/HubSpot<span class="block">Integration</span></div>
+              </li>
+              <li class="services-circle__item" data-color="#fe8ae5">
+                <div class="services-circle__item-title" itemprop="makesOffer">Site<span class="block">Internationalization</span></div>
+              </li>
+              <li class="services-circle__item" data-color="#fff8a7">
+                <div class="services-circle__item-title" itemprop="makesOffer">Marketo/HubSpot<span class="block">Email Templates</span></div>
+              </li>
+              <li class="services-circle__item" data-color="#a7d0ff">
+                <div class="services-circle__item-title" itemprop="makesOffer">Full Website<span class="block">Rebuild</span></div>
+              </li>
+              <li class="services-circle__item" data-color="#ffadb7">
+                <div class="services-circle__item-title" itemprop="makesOffer">Full Site Migration<span class="block">to New Server</span></div>
+              </li>
+              <li class="services-circle__item" data-color="#98fbe3">
+                <div class="services-circle__item-title" itemprop="makesOffer">CMS<span class="block">Customisation</span></div>
+              </li>
+              <li class="services-circle__item" data-color="#a0d17f">
+                <div class="services-circle__item-title" itemprop="makesOffer">Marketo/HubSpot<span class="block">Landing Pages</span></div>
+              </li>
+              <li class="services-circle__item" data-color="#dfeeff">
+                <div class="services-circle__item-title" itemprop="makesOffer">New Webpage<span class="block">Implementation</span></div>
+              </li>
+              <li class="services-circle__item" data-color="#ffd289">
+                <div class="services-circle__item-title" itemprop="makesOffer">WordPress Plugin<span class="block">Customization</span></div>
+              </li>
+              <li class="services-circle__item" data-color="#b7ffef">
+                <div class="services-circle__item-title" itemprop="makesOffer">Custom Script<span class="block">Creations</span></div>
+              </li>
+            </ul>
+            <ul class="services-images">
+              <li class="services-images__item">
+                <div class="services-images__item-wrapper"><img src="../../img/services-images/first-service.svg"><span class="services-images__item-time">4+ Hours</span></div>
+              </li>
+              <li class="services-images__item">
+                <div class="services-images__item-wrapper"><svg class="enliven" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 322 221" enable-background="new 0 0 322 221" xml:space="preserve" data-global-elvn="enableViewport, disableClick, none, startInvisible, notResponsive, 500, notLoop, 500">
 
     <g id="Page-1" xmlns="http://www.w3.org/2000/svg">
         <g id="m_25" transform="translate(4.000000, 1.000000)">
@@ -293,10 +294,10 @@
     </g>
 </svg>
 <span class="services-images__item-time">4+ Hours</span>
-              </div>
-            </li>
-            <li class="services-images__item">
-              <div class="services-images__item-wrapper"><svg class="enliven" version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 297 212" enable-background="new 0 0 297 212" xml:space="preserve" data-global-elvn="enableViewport, disableClick, none, startInvisible, notResponsive, 500, notLoop, 500">
+                </div>
+              </li>
+              <li class="services-images__item">
+                <div class="services-images__item-wrapper"><svg class="enliven" version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 297 212" enable-background="new 0 0 297 212" xml:space="preserve" data-global-elvn="enableViewport, disableClick, none, startInvisible, notResponsive, 500, notLoop, 500">
 
     <g id="Page-1" xmlns="http://www.w3.org/2000/svg">
         <g id="m_33">
@@ -411,10 +412,10 @@
     </g>
 </svg>
 <span class="services-images__item-time">1+ Days</span>
-              </div>
-            </li>
-            <li class="services-images__item">
-              <div class="services-images__item-wrapper"><svg class="enliven" version="1.1" id="Layer_4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 336 236" enable-background="new 0 0 336 236" xml:space="preserve" data-global-elvn="enableViewport, disableClick, none, startInvisible, notResponsive, 500, notLoop, 500">
+                </div>
+              </li>
+              <li class="services-images__item">
+                <div class="services-images__item-wrapper"><svg class="enliven" version="1.1" id="Layer_4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 336 236" enable-background="new 0 0 336 236" xml:space="preserve" data-global-elvn="enableViewport, disableClick, none, startInvisible, notResponsive, 500, notLoop, 500">
     <g id="Page-1" xmlns="http://www.w3.org/2000/svg">
         <g id="m_11">
             <g id="Group" transform="translate(279.000000, 123.000000)" data-elvn="wheelC, in, 2000, 300, backout" class="elvn-layer">
@@ -642,10 +643,10 @@
     </g>
 </svg>
 <span class="services-images__item-time">4&mdash;8 Hours</span>
-              </div>
-            </li>
-            <li class="services-images__item">
-              <div class="services-images__item-wrapper"><svg class="enliven" version="1.1" id="Layer_5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 295 217" enable-background="new 0 0 295 217" xml:space="preserve" data-global-elvn="enableViewport, disableClick, none, startInvisible, notResponsive, 500, notLoop, 500">
+                </div>
+              </li>
+              <li class="services-images__item">
+                <div class="services-images__item-wrapper"><svg class="enliven" version="1.1" id="Layer_5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 295 217" enable-background="new 0 0 295 217" xml:space="preserve" data-global-elvn="enableViewport, disableClick, none, startInvisible, notResponsive, 500, notLoop, 500">
     <g id="Page-1" xmlns="http://www.w3.org/2000/svg">
         <g id="m_20" transform="translate(0.000000, 1.000000)">
             <g id="ipad" transform="translate(95.000000, 28.000000)" data-elvn="stamp, in, 0, 300, backout" class="elvn-layer">
@@ -952,10 +953,10 @@
     </g>
 </svg>
 <span class="services-images__item-time">6+ Weeks</span>
-              </div>
-            </li>
-            <li class="services-images__item">
-              <div class="services-images__item-wrapper"><svg class="enliven" version="1.1" id="Layer_6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 336 236" enable-background="new 0 0 336 236" xml:space="preserve" data-global-elvn="enableViewport, disableClick, none, startInvisible, notResponsive, 500, notLoop, 500">
+                </div>
+              </li>
+              <li class="services-images__item">
+                <div class="services-images__item-wrapper"><svg class="enliven" version="1.1" id="Layer_6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 336 236" enable-background="new 0 0 336 236" xml:space="preserve" data-global-elvn="enableViewport, disableClick, none, startInvisible, notResponsive, 500, notLoop, 500">
     <g id="Page-1" xmlns="http://www.w3.org/2000/svg">
         <g id="m_18">
             <path id="Shape" fill="#FFFFFF" stroke="#0E3C54" stroke-width="2" stroke-dasharray="2" d="M23.232,87.827h53.787" data-elvn="expandL, in, 1000, 200, linear" class="elvn-layer"></path>
@@ -1116,10 +1117,10 @@
     </g>
 </svg>
 <span class="services-images__item-time">1+ Weeks</span>
-              </div>
-            </li>
-            <li class="services-images__item">
-              <div class="services-images__item-wrapper"><svg class="enliven" version="1.1" id="Layer_7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 337 236" enable-background="new 0 0 337 236" xml:space="preserve" data-global-elvn="enableViewport, disableClick, none, startInvisible, notResponsive, 500, notLoop, 500">
+                </div>
+              </li>
+              <li class="services-images__item">
+                <div class="services-images__item-wrapper"><svg class="enliven" version="1.1" id="Layer_7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 337 236" enable-background="new 0 0 337 236" xml:space="preserve" data-global-elvn="enableViewport, disableClick, none, startInvisible, notResponsive, 500, notLoop, 500">
     <g id="Page-1" xmlns="http://www.w3.org/2000/svg">
         <g id="m_27">
             <path id="Shape" fill="#F8D383" stroke="#0E3C54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="
@@ -1321,10 +1322,10 @@
     </g>
 </svg>
 <span class="services-images__item-time">2+ Hours</span>
-              </div>
-            </li>
-            <li class="services-images__item">
-              <div class="services-images__item-wrapper"><svg class="enliven" version="1.1" id="Layer_8" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300 208" enable-background="new 0 0 300 208" xml:space="preserve" data-global-elvn="enableViewport, disableClick, none, startInvisible, notResponsive, 500, notLoop, 500">
+                </div>
+              </li>
+              <li class="services-images__item">
+                <div class="services-images__item-wrapper"><svg class="enliven" version="1.1" id="Layer_8" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300 208" enable-background="new 0 0 300 208" xml:space="preserve" data-global-elvn="enableViewport, disableClick, none, startInvisible, notResponsive, 500, notLoop, 500">
     <g id="Page-1" xmlns="http://www.w3.org/2000/svg">
         <g id="m_30" transform="translate(1.000000, 1.000000)">
             <g id="Group" transform="translate(240.000000, 92.000000)" data-elvn="scaleC, in, 2400, 300, backout" class="elvn-layer">
@@ -1571,10 +1572,10 @@
     </g>
 </svg>
 <span class="services-images__item-time">6&mdash;12 Hours</span>
-              </div>
-            </li>
-            <li class="services-images__item">
-              <div class="services-images__item-wrapper"><svg class="enliven" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 308 210" enable-background="new 0 0 308 210" xml:space="preserve" data-global-elvn="enableViewport, disableClick, none, startInvisible, notResponsive, 500, notLoop, 500">
+                </div>
+              </li>
+              <li class="services-images__item">
+                <div class="services-images__item-wrapper"><svg class="enliven" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 308 210" enable-background="new 0 0 308 210" xml:space="preserve" data-global-elvn="enableViewport, disableClick, none, startInvisible, notResponsive, 500, notLoop, 500">
     <g id="Page-1" xmlns="http://www.w3.org/2000/svg">
         <g id="m_10" transform="translate(0.000000, 1.000000)">
 
@@ -1746,10 +1747,10 @@
     </g>
 </svg>
 <span class="services-images__item-time">4&mdash;8 Hours</span>
-              </div>
-            </li>
-            <li class="services-images__item">
-              <div class="services-images__item-wrapper"><svg class="enliven" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 336 236" enable-background="new 0 0 336 236" xml:space="preserve" data-global-elvn="enableViewport, disableClick, none, startInvisible, notResponsive, 500, notLoop, 500">
+                </div>
+              </li>
+              <li class="services-images__item">
+                <div class="services-images__item-wrapper"><svg class="enliven" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 336 236" enable-background="new 0 0 336 236" xml:space="preserve" data-global-elvn="enableViewport, disableClick, none, startInvisible, notResponsive, 500, notLoop, 500">
     <g id="Page-1" xmlns="http://www.w3.org/2000/svg">
         <g id="m_34">
             <polyline id="Shape" opacity="0.2078" enable-background="new    " points="95.377,69.456 95.377,146.371 226.822,146.371
@@ -1911,10 +1912,10 @@
         </g>
     </g>
 </svg><span class="services-images__item-time">4&mdash;6 Hours</span>
-              </div>
-            </li>
-            <li class="services-images__item">
-              <div class="services-images__item-wrapper"><svg class="enliven" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 295 178" enable-background="0 0 295 178" xml:space="preserve" data-global-elvn="enableViewport, disableClick, none, startInvisible, notResponsive, 500, notLoop, 500">
+                </div>
+              </li>
+              <li class="services-images__item">
+                <div class="services-images__item-wrapper"><svg class="enliven" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 295 178" enable-background="0 0 295 178" xml:space="preserve" data-global-elvn="enableViewport, disableClick, none, startInvisible, notResponsive, 500, notLoop, 500">
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="m_12" transform="translate(1.000000, 1.000000)">
             <g id="Open_Mail_1_" transform="translate(234.000000, 2.000000)" stroke-width="2" fill-rule="nonzero" data-elvn="scaleTL, in, 2700, 300, backout" class="elvn-layer">
@@ -2120,15 +2121,15 @@
     </g>
 </svg>
 <span class="services-images__item-time">8+ Hours</span>
-              </div>
-            </li>
-          </ul>
-          <div class="services-action show"><a class="btn btn--red" href="/#contact">Contact</a></div>
-        </div>
-        <div class="extra-small">
-          <div class="row">
-            <div class="col-xs-12">
-              <figure class="phone-image"><svg class="phone-enliven" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="303px" height="202px" viewBox="0 0 303 202" enable-background="new 0 0 303 202" xml:space="preserve"
+                </div>
+              </li>
+            </ul>
+            <div class="services-action show"><a class="btn btn--red" href="/#contact">Contact</a></div>
+          </div>
+          <div class="extra-small">
+            <div class="row">
+              <div class="col-xs-12">
+                <figure class="phone-image"><svg class="phone-enliven" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="303px" height="202px" viewBox="0 0 303 202" enable-background="new 0 0 303 202" xml:space="preserve"
   data-global-elvn="enableViewport, disableClick, oneHalf, startInisible, notResponsive, 500, notLoop, 500">
     <g id="Page-1" xmlns="http://www.w3.org/2000/svg">
         <g id="m_28" transform="translate(1.000000, 1.000000)">
@@ -2370,11 +2371,11 @@
     </g>
 </svg>
 
-              </figure>
-              <div class="services-circle__item-title--xs">Server Environment<span class="block">Securing and Customization</span></div>4+ Hours
-            </div>
-            <div class="col-xs-12">
-              <figure class="phone-image"><svg class="phone-enliven" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 336 236" enable-background="new 0 0 336 236" xml:space="preserve" data-global-elvn="enableViewport, disableClick, none, startInvisible, notResponsive, 500, notLoop, 500">
+                </figure>
+                <div class="services-circle__item-title--xs">Server Environment<span class="block">Securing and Customization</span></div>4+ Hours
+              </div>
+              <div class="col-xs-12">
+                <figure class="phone-image"><svg class="phone-enliven" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 336 236" enable-background="new 0 0 336 236" xml:space="preserve" data-global-elvn="enableViewport, disableClick, none, startInvisible, notResponsive, 500, notLoop, 500">
     <g id="Page-1" xmlns="http://www.w3.org/2000/svg">
         <g id="m_34">
             <polyline id="Shape" opacity="0.2078" enable-background="new    " points="95.377,69.456 95.377,146.371 226.822,146.371
@@ -2536,11 +2537,11 @@
         </g>
     </g>
 </svg>
-              </figure>
-              <div class="services-circle__item-title--xs">WordPress Plugin<span class="block">Customization</span></div>4-6 Hours
-            </div>
-            <div class="col-xs-12">
-              <figure class="phone-image"><svg class="phone-enliven" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 308 210" enable-background="new 0 0 308 210" xml:space="preserve" data-global-elvn="enableViewport, disableClick, none, startInvisible, notResponsive, 500, notLoop, 500">
+                </figure>
+                <div class="services-circle__item-title--xs">WordPress Plugin<span class="block">Customization</span></div>4-6 Hours
+              </div>
+              <div class="col-xs-12">
+                <figure class="phone-image"><svg class="phone-enliven" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 308 210" enable-background="new 0 0 308 210" xml:space="preserve" data-global-elvn="enableViewport, disableClick, none, startInvisible, notResponsive, 500, notLoop, 500">
     <g id="Page-1" xmlns="http://www.w3.org/2000/svg">
         <g id="m_10" transform="translate(0.000000, 1.000000)">
 
@@ -2712,11 +2713,11 @@
     </g>
 </svg>
 
-              </figure>
-              <div class="services-circle__item-title--xs">New Webpage<span class="block">Implementation</span></div>4-8 Hours
-            </div>
-            <div class="col-xs-12">
-              <figure class="phone-image"><svg class="phone-enliven" version="1.1" id="Layer_4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 336 236" enable-background="new 0 0 336 236" xml:space="preserve" data-global-elvn="enableViewport, disableClick, none, startInvisible, notResponsive, 500, notLoop, 500">
+                </figure>
+                <div class="services-circle__item-title--xs">New Webpage<span class="block">Implementation</span></div>4-8 Hours
+              </div>
+              <div class="col-xs-12">
+                <figure class="phone-image"><svg class="phone-enliven" version="1.1" id="Layer_4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 336 236" enable-background="new 0 0 336 236" xml:space="preserve" data-global-elvn="enableViewport, disableClick, none, startInvisible, notResponsive, 500, notLoop, 500">
     <g id="Page-1" xmlns="http://www.w3.org/2000/svg">
         <g id="m_11">
             <g id="Group" transform="translate(279.000000, 123.000000)" data-elvn="wheelC, in, 2000, 300, backout" class="elvn-layer">
@@ -2943,11 +2944,11 @@
         </g>
     </g>
 </svg>
-              </figure>
-              <div class="services-circle__item-title--xs">Marketo/HubSpot<span class="block">Email Templates</span></div>4-8 Hours
-            </div>
-            <div class="col-xs-12">
-              <figure class="phone-image"><svg class="phone-enliven" version="1.1" id="Layer_8" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300 208" enable-background="new 0 0 300 208" xml:space="preserve" data-global-elvn="enableViewport, disableClick, none, startInvisible, notResponsive, 500, notLoop, 500">
+                </figure>
+                <div class="services-circle__item-title--xs">Marketo/HubSpot<span class="block">Email Templates</span></div>4-8 Hours
+              </div>
+              <div class="col-xs-12">
+                <figure class="phone-image"><svg class="phone-enliven" version="1.1" id="Layer_8" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300 208" enable-background="new 0 0 300 208" xml:space="preserve" data-global-elvn="enableViewport, disableClick, none, startInvisible, notResponsive, 500, notLoop, 500">
     <g id="Page-1" xmlns="http://www.w3.org/2000/svg">
         <g id="m_30" transform="translate(1.000000, 1.000000)">
             <g id="Group" transform="translate(240.000000, 92.000000)" data-elvn="scaleC, in, 2400, 300, backout" class="elvn-layer">
@@ -3193,11 +3194,11 @@
         </g>
     </g>
 </svg>
-              </figure>
-              <div class="services-circle__item-title--xs">Marketo/HubSpot<span class="block">Landing Pages</span></div>6-12 Hours
-            </div>
-            <div class="col-xs-12">
-              <figure class="phone-image"><svg class="phone-enliven" version="1.1" id="Layer_6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 336 236" enable-background="new 0 0 336 236" xml:space="preserve" data-global-elvn="enableViewport, disableClick, none, startInvisible, notResponsive, 500, notLoop, 500">
+                </figure>
+                <div class="services-circle__item-title--xs">Marketo/HubSpot<span class="block">Landing Pages</span></div>6-12 Hours
+              </div>
+              <div class="col-xs-12">
+                <figure class="phone-image"><svg class="phone-enliven" version="1.1" id="Layer_6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 336 236" enable-background="new 0 0 336 236" xml:space="preserve" data-global-elvn="enableViewport, disableClick, none, startInvisible, notResponsive, 500, notLoop, 500">
     <g id="Page-1" xmlns="http://www.w3.org/2000/svg">
         <g id="m_18">
             <path id="Shape" fill="#FFFFFF" stroke="#0E3C54" stroke-width="2" stroke-dasharray="2" d="M23.232,87.827h53.787" data-elvn="expandL, in, 1000, 200, linear" class="elvn-layer"></path>
@@ -3357,11 +3358,11 @@
         </g>
     </g>
 </svg>
-              </figure>
-              <div class="services-circle__item-title--xs">Full Site<span class="block">Migration to New Server</span></div>1+ week
-            </div>
-            <div class="col-xs-12">
-              <figure class="phone-image"><svg class="phone-enliven" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 322 221" enable-background="new 0 0 322 221" xml:space="preserve" data-global-elvn="enableViewport, disableClick, none, startInvisible, notResponsive, 500, notLoop, 500">
+                </figure>
+                <div class="services-circle__item-title--xs">Full Site<span class="block">Migration to New Server</span></div>1+ week
+              </div>
+              <div class="col-xs-12">
+                <figure class="phone-image"><svg class="phone-enliven" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 322 221" enable-background="new 0 0 322 221" xml:space="preserve" data-global-elvn="enableViewport, disableClick, none, startInvisible, notResponsive, 500, notLoop, 500">
 
     <g id="Page-1" xmlns="http://www.w3.org/2000/svg">
         <g id="m_25" transform="translate(4.000000, 1.000000)">
@@ -3572,11 +3573,11 @@
     </g>
 </svg>
 
-              </figure>
-              <div class="services-circle__item-title--xs">Marketo/HubSpot<span class="block">Integration</span></div>4+ hours
-            </div>
-            <div class="col-xs-12">
-              <figure class="phone-image"><svg class="phone-enliven" version="1.1" id="Layer_5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 295 217" enable-background="new 0 0 295 217" xml:space="preserve" data-global-elvn="enableViewport, disableClick, none, startInvisible, notResponsive, 500, notLoop, 500">
+                </figure>
+                <div class="services-circle__item-title--xs">Marketo/HubSpot<span class="block">Integration</span></div>4+ hours
+              </div>
+              <div class="col-xs-12">
+                <figure class="phone-image"><svg class="phone-enliven" version="1.1" id="Layer_5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 295 217" enable-background="new 0 0 295 217" xml:space="preserve" data-global-elvn="enableViewport, disableClick, none, startInvisible, notResponsive, 500, notLoop, 500">
     <g id="Page-1" xmlns="http://www.w3.org/2000/svg">
         <g id="m_20" transform="translate(0.000000, 1.000000)">
             <g id="ipad" transform="translate(95.000000, 28.000000)" data-elvn="stamp, in, 0, 300, backout" class="elvn-layer">
@@ -3882,11 +3883,11 @@
         </g>
     </g>
 </svg>
-              </figure>
-              <div class="services-circle__item-title--xs">Full Website<span class="block">Rebuild</span></div>6+ weeks
-            </div>
-            <div class="col-xs-12">
-              <figure class="phone-image"><svg class="phone-enliven" version="1.1" id="Layer_7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 337 236" enable-background="new 0 0 337 236" xml:space="preserve" data-global-elvn="enableViewport, disableClick, none, startInvisible, notResponsive, 500, notLoop, 500">
+                </figure>
+                <div class="services-circle__item-title--xs">Full Website<span class="block">Rebuild</span></div>6+ weeks
+              </div>
+              <div class="col-xs-12">
+                <figure class="phone-image"><svg class="phone-enliven" version="1.1" id="Layer_7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 337 236" enable-background="new 0 0 337 236" xml:space="preserve" data-global-elvn="enableViewport, disableClick, none, startInvisible, notResponsive, 500, notLoop, 500">
     <g id="Page-1" xmlns="http://www.w3.org/2000/svg">
         <g id="m_27">
             <path id="Shape" fill="#F8D383" stroke="#0E3C54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="
@@ -4087,11 +4088,11 @@
         </g>
     </g>
 </svg>
-              </figure>
-              <div class="services-circle__item-title--xs">CMS<span class="block">Customization</span></div>2+ hours
-            </div>
-            <div class="col-xs-12">
-              <figure class="phone-image"><svg class="phone-enliven" version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 297 212" enable-background="new 0 0 297 212" xml:space="preserve" data-global-elvn="enableViewport, disableClick, none, startInvisible, notResponsive, 500, notLoop, 500">
+                </figure>
+                <div class="services-circle__item-title--xs">CMS<span class="block">Customization</span></div>2+ hours
+              </div>
+              <div class="col-xs-12">
+                <figure class="phone-image"><svg class="phone-enliven" version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 297 212" enable-background="new 0 0 297 212" xml:space="preserve" data-global-elvn="enableViewport, disableClick, none, startInvisible, notResponsive, 500, notLoop, 500">
 
     <g id="Page-1" xmlns="http://www.w3.org/2000/svg">
         <g id="m_33">
@@ -4205,11 +4206,11 @@
         </g>
     </g>
 </svg>
-              </figure>
-              <div class="services-circle__item-title--xs">Site<span class="block">Internationalization</span></div>1+ days
-            </div>
-            <div class="col-xs-12">
-              <figure class="phone-image"><svg class="phone-enliven" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 295 178" enable-background="0 0 295 178" xml:space="preserve" data-global-elvn="enableViewport, disableClick, none, startInvisible, notResponsive, 500, notLoop, 500">
+                </figure>
+                <div class="services-circle__item-title--xs">Site<span class="block">Internationalization</span></div>1+ days
+              </div>
+              <div class="col-xs-12">
+                <figure class="phone-image"><svg class="phone-enliven" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 295 178" enable-background="0 0 295 178" xml:space="preserve" data-global-elvn="enableViewport, disableClick, none, startInvisible, notResponsive, 500, notLoop, 500">
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="m_12" transform="translate(1.000000, 1.000000)">
             <g id="Open_Mail_1_" transform="translate(234.000000, 2.000000)" stroke-width="2" fill-rule="nonzero" data-elvn="scaleTL, in, 2700, 300, backout" class="elvn-layer">
@@ -4414,16 +4415,17 @@
         </g>
     </g>
 </svg>
-              </figure>
-              <div class="services-circle__item-title--xs">Custom<span class="block">Script Creations</span></div>8+ hours
+                </figure>
+                <div class="services-circle__item-title--xs">Custom<span class="block">Script Creations</span></div>8+ hours
+              </div>
+              <div class="col-xs-12"><a class="btn btn--red" href="/#contact">Contact</a></div>
             </div>
-            <div class="col-xs-12"><a class="btn btn--red" href="/#contact">Contact</a></div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
     <script src="js/jquery-2.1.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/slider.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

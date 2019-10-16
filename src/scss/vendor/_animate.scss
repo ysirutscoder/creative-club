@@ -3688,6 +3688,7 @@
 
   100% {
     margin-top: 0;
+    z-index: 10;
   }
 }
 
@@ -3698,6 +3699,7 @@
   }
 
   100% {
-    margin-bottom: 100vh
+    margin-bottom: 100vh;
+    z-index: 1;
   }
 }
