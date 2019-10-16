@@ -64,3 +64,7 @@ for (let id = 0; id < navItems.length; id++) {
         mySlider.gotoSlide('#slide' + id);
     }, { passive: false });
 }
+
+document.querySelector('.navbar__logo').addEventListener('click', e => {
+    mySlider.gotoSlide('#slide0');
+}, { passive: false });

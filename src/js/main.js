@@ -66,6 +66,11 @@ let passiveIfSupported = false;
 for ( let id = 0; id < navItems.length; id++ ) {
     document.querySelectorAll('.navbar__item')[id].addEventListener('click',  () => {
         mySlider.gotoSlide('#slide' + id);
-        
+
     }, {passive: false} );
 }
+
+document.querySelector('.navbar__logo').addEventListener('click', e => {
+    mySlider.gotoSlide('#slide0');
+
+}, {passive: false})

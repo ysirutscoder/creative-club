@@ -54,6 +54,9 @@ $extrasmall-screen: 767px;
   .container {
     position: relative;
     height: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
 
     @media all and (-ms-high-contrast: none),
     (-ms-high-contrast: active) {
@@ -64,6 +67,10 @@ $extrasmall-screen: 767px;
 
   .small-and-up {
     height: 100%;
+    position: relative;
+    margin-right: 7rem;
+    margin-left: 5rem;
+    padding-bottom: 5rem;
   }
 }
 
@@ -89,10 +96,10 @@ $extrasmall-screen: 767px;
   }
 
 
-  @include on-circle($item-count: 11, $circle-size: 35rem, $item-size: 3rem);
+  @include on-circle($item-count: 11, $circle-size: 30rem, $item-size: 3rem);
 
   @media screen and (max-width: $small-screen) {
-    @include on-circle($item-count: 11, $circle-size: 48rem, $item-size: 4rem);
+    @include on-circle($item-count: 11, $circle-size: 40rem, $item-size: 4rem);
   }
 
   &__item {
@@ -206,7 +213,7 @@ $extrasmall-screen: 767px;
 .all-services__item-circle {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 46%;
   opacity: 1;
   transform: translate(-50%, -50%);
   background: #d7feac;
@@ -216,8 +223,8 @@ $extrasmall-screen: 767px;
   transition: all .3s cubic-bezier(.76, .62, .87, 1.49);
 
   &.pump {
-    width: 21rem;
-    height: 21rem;
+    width: 17rem;
+    height: 17rem;
     opacity: 1;
 
     @media screen and (max-width: $small-screen + 1) {
@@ -230,7 +237,7 @@ $extrasmall-screen: 767px;
 .services-images {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 46%;
   transform: translate(-50%, -50%);
   margin: 0;
   padding: 0;
@@ -270,7 +277,7 @@ $extrasmall-screen: 767px;
 
       &.show {
         opacity: 1;
-        bottom: -8rem;
+        bottom: -6rem;
       }
     }
   }
@@ -350,10 +357,10 @@ $extrasmall-screen: 767px;
 .services-action {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 46%;
   background: rgba(255, 255, 255, 0);
-  width: 21rem;
-  height: 21rem;
+  width: 17rem;
+  height: 17rem;
   transform: translate(-50%, -50%);
   text-align: center;
   border-radius: 50%;
@@ -435,4 +442,29 @@ $extrasmall-screen: 767px;
 
 .phone-image {
   padding-bottom: 1rem;
+}
+
+.about-us {
+  &__text {
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      @include font-stm;
+      text-align: center;
+      padding-left: 5rem;
+      padding-right: 2rem;
+
+      h2 {
+        font-size: 3rem;
+        color: #f30b69;
+        margin-bottom: 2.5rem;
+      }
+
+    }
+
+    font-size: 1.7rem;
+    color: #6d1f1f;
+  }
 }
