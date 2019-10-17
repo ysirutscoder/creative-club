@@ -85,6 +85,7 @@
       position: absolute;
       background-color: #000;
       border-radius: 2px;
+      transition: .4s ease all;
 
       &:nth-child(1) {
         top: 0;
@@ -96,6 +97,28 @@
 
       &:nth-child(3) {
         top: 20px;
+      }
+    }
+
+    &--close {
+
+      & span {
+        &:nth-child(1) {
+          transform: rotate(-45deg);
+          top: 40%;
+
+        }
+
+        &:nth-child(2) {
+          right: 40px;
+          animation: hamburger-hiding .4s ease-in;
+          opacity: 0;
+        }
+
+        &:nth-child(3) {
+          transform: rotate(45deg);
+          top: 12px;
+        }
       }
     }
   }
@@ -135,8 +158,12 @@
         position: fixed;
         display: flex;
         flex-direction: column;
+        background-color: #f4ecd9;
+        justify-content: center;
+        height: 100vh;
+        z-index: -1;
         right: 0;
-        top: 90px;
+        top: 0;
         margin: 0;
         color: #6d1f1f;
         width: 100%;
@@ -146,17 +173,9 @@
     }
 
     &__item {
-      margin: 2px 0;
+      margin: 10px 0;
       width: 100%;
       padding: 5px 0;
-      background-color: #f4ecd9;
-
-      &::after {
-        content: "";
-        height: 1px;
-        background-color: transparent;
-        width: 100%;
-      }
     }
 
     &__hamburger {

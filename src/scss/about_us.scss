@@ -468,3 +468,29 @@ $extrasmall-screen: 767px;
     color: #6d1f1f;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .all-services {
+    .container {
+      flex-direction: column;
+      width: 100%;
+      padding: 0 35px;
+      padding-top: 120px;
+      max-width: unset;
+    }
+  }
+
+  .about-us {
+    &__text-wrapper {
+      padding: 0;
+
+      h2 {
+        font-size: 2rem;
+      }
+    }
+
+    &__text {
+      font-size: 1.5rem;
+    }
+  }
+}

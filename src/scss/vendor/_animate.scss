@@ -3646,6 +3646,16 @@
   }
 }
 
+@keyframes text-load--mobile {
+  0% {
+    margin-left: -200%;
+  }
+
+  100% {
+    margin-left: 0;
+  }
+}
+
 @keyframes main-text-load {
   0% {
     opacity: 0;
@@ -3671,12 +3681,24 @@
 @keyframes mobile-navbar-load {
   0% {
     opacity: 0;
-    top: -200px;
+    top: -100vh;
   }
 
   100% {
     opacity: 1;
-    top: 90px;
+    top: 0;
+  }
+}
+
+@keyframes navbar-hiding {
+  0% {
+    opacity: 1;
+    top: 0;
+  }
+
+  100% {
+    opacity: 0;
+    top: 100vh;
   }
 }
 
@@ -3701,5 +3723,17 @@
   100% {
     margin-bottom: 100vh;
     z-index: 1;
+  }
+}
+
+@keyframes hamburger-hiding {
+  0% {
+    opacity: 1;
+    right: 0;
+  }
+
+  100% {
+    opacity: 0;
+    right: 40px;
   }
 }
