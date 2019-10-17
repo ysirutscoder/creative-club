@@ -182,10 +182,12 @@ $extrasmall-screen: 767px;
 
     &--xs {
       position: static;
+      @include font-stm;
     }
 
     span {
       color: black;
+      @include font-stm;
 
       &.block {
         display: block;
@@ -430,6 +432,16 @@ $extrasmall-screen: 767px;
     .col-xs-12 {
       padding-bottom: 6rem;
       font-size: 1.4rem;
+      @include font-stm;
+      color: #f1126b;
+
+      .btn {
+        color: white;
+        text-decoration: none;
+        background-color: #f1126b;
+        padding: 20px 50px;
+        transition: all ease .3s;
+      }
     }
 
     .phone-image {
@@ -464,6 +476,7 @@ $extrasmall-screen: 767px;
 
     }
 
+    margin-bottom: 3rem;
     font-size: 1.7rem;
     color: #6d1f1f;
   }
