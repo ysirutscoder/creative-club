@@ -64,6 +64,18 @@
       &_11 {
         animation: appear 5.5s ease-in-out;
       }
+
+      //--- VISIBLE LINES ON MOBILE DEVICES ---
+
+      // @media screen and (max-width: 992px) {
+      //   margin: -10% 35px 0 20px;
+      //   width: 10%;
+
+      // }
+
+      // @media screen and (max-width: 768px) {
+      //   margin: -35% 30px 0 4px;
+      // }
     }
 
     .main-text {
@@ -76,51 +88,65 @@
       color: #6d1e1e;
       font-size: 102px;
       animation: main-text-load 2s ease-in-out;
+
+      @media screen and (max-width: 768px) {
+        h2 {
+          display: none;
+
+        }
+
+        width: 100%;
+        left: 0;
+      }
+
+      p {
+        font-size: 30px;
+        margin-left: 60%;
+        margin-top: 30px;
+        color: #ff056b;
+        animation: text-load 2s ease-in-out;
+
+        @media screen and (max-width: 768px) {
+          font-size: 3rem;
+          margin-left: 0;
+          text-align: center;
+          padding: 0 40px;
+          width: 100%;
+        }
+      }
+
     }
 
-    p {
-      font-size: 30px;
-      margin-left: 60%;
-      margin-top: 30px;
-      color: #ff056b;
-      animation: text-load 2s ease-in-out;
-    }
+    .main-background-night {
+      background-color: black;
 
+      .main-background_line {
+        background-color: #c32aff;
+      }
+
+      .main-text {
+        text-shadow: 1px -1px 2px #703e8a;
+      }
+    }
   }
 
-  .main-background-night {
-    background-color: black;
-
-    .main-background_line {
-      background-color: #c32aff;
-    }
-
+  @media screen and (max-width: 992px) {
     .main-text {
-      text-shadow: 1px -1px 2px #703e8a;
+      p {
+        margin-left: 30%;
+      }
     }
   }
-}
 
-@media screen and (max-width: 992px) {
-  .main-text {
-    p {
-      margin-left: 30%;
+  @media screen and (max-width: 768px) {
+    .main-text {
+      font-size: 26px;
     }
   }
-}
 
-@media screen and (max-width: 768px) {
-  .main-text {
-    font-size: 26px;
-
-    p {
-      margin-left: 30%;
+  @media screen and (max-width: 576px) and (min-width: 300px) {
+    .main-text {
+      left: 7%;
     }
-  }
-}
-
-@media screen and (max-width: 576px) and (min-width: 300px) {
-  .main-text {
-    left: 7%;
   }
 }
