@@ -55,23 +55,22 @@ $('.navbar__hamburger').click(e => {
     $('.navbar__hamburger').toggleClass('navbar__hamburger--close');
 });
 
+$('.navbar__item').click(e => {
+    $('.navbar__right-side').removeClass('navbar__right-side--visible');
+    $('.navbar__hamburger').removeClass('navbar__hamburger--close');
+});
+
 if (window.screen.width > 767) {
     let mySlider = slider('.slides');
-
     let navItems = document.querySelectorAll('.navbar__item');
-    let passiveIfSupported = false;
 
     for (let id = 0; id < navItems.length; id++) {
         document.querySelectorAll('.navbar__item')[id].addEventListener('click', () => {
-            $('.navbar__right-side').removeClass('navbar__right-side--visible');
-            $('.navbar__hamburger').removeClass('navbar__hamburger--close');
             mySlider.gotoSlide('#slide' + id);
         }, { passive: false });
     }
 
     document.querySelector('.navbar__logo').addEventListener('click', e => {
-        $('.navbar__right-side').removeClass('navbar__right-side--visible');
-        $('.navbar__hamburger').removeClass('navbar__hamburger--close');
         mySlider.gotoSlide('#slide0');
     }, { passive: false });
 } else {
