@@ -56,11 +56,12 @@ $('.navbar__hamburger').click(e => {
 });
 
 $('.navbar__item').click(e => {
+    e.preventDefault();
     $('.navbar__right-side').removeClass('navbar__right-side--visible');
     $('.navbar__hamburger').removeClass('navbar__hamburger--close');
 });
 
-if (window.screen.width > 767) {
+if (window.screen.width > 1199) {
     let mySlider = slider('.slides');
     let navItems = document.querySelectorAll('.navbar__item');
 

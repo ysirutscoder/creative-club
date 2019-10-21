@@ -2,10 +2,11 @@
 @import 'vendor/flexboxgrid';
 @import 'vendor/grid';
 @import 'vendor/normalize';
+@import 'mixins/colors.scss';
 @import 'vendor/slider.scss';
 @import 'navbar';
 @import "main";
 @import "about_us";
 @import 'general';
-@import 'ourprojects';
+@import 'our_work';
 @import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap');

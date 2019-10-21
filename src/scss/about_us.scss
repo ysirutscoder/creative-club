@@ -1,4 +1,5 @@
 @import 'mixins/font-mixins.scss';
+@import 'mixins/colors';
 
 $small-screen: 791px;
 $extrasmall-screen: 767px;
@@ -45,7 +46,7 @@ $extrasmall-screen: 767px;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #fbf9ed;
+  background-color: $back-color;
 
   @media screen and (max-width: $small-screen) {
     padding-top: 0;
@@ -98,9 +99,9 @@ $extrasmall-screen: 767px;
 
   @include on-circle($item-count: 11, $circle-size: 30rem, $item-size: 3rem);
 
-  @media screen and (max-width: $small-screen) {
-    @include on-circle($item-count: 11, $circle-size: 40rem, $item-size: 4rem);
-  }
+  // @media screen and (max-width: $small-screen) {
+  //   @include on-circle($item-count: 11, $circle-size: 40rem, $item-size: 4rem);
+  // }
 
   &__item {
     opacity: 1;
@@ -194,10 +195,10 @@ $extrasmall-screen: 767px;
       }
     }
 
-    @media screen and (max-width: $small-screen) {
-      font-size: 1.4rem;
-      min-width: 16rem;
-    }
+    // @media screen and (max-width: $small-screen) {
+    //   font-size: 1.4rem;
+    //   min-width: 16rem;
+    // }
 
     &--xs {
       position: static;
@@ -229,10 +230,10 @@ $extrasmall-screen: 767px;
     height: 17rem;
     opacity: 1;
 
-    @media screen and (max-width: $small-screen + 1) {
-      width: 22rem;
-      height: 22rem;
-    }
+    // @media screen and (max-width: $small-screen + 1) {
+    //   width: 22rem;
+    //   height: 22rem;
+    // }
   }
 }
 
@@ -248,10 +249,10 @@ $extrasmall-screen: 767px;
   height: 12rem;
   border-radius: 50%;
 
-  @media screen and (max-width: 991px) {
-    width: 22rem;
-    height: 18rem;
-  }
+  // @media screen and (max-width: 992px) {
+  //   width: 22rem;
+  //   height: 18rem;
+  // }
 
   &__item {
     display: none;
@@ -428,6 +429,7 @@ $extrasmall-screen: 767px;
   .extra-small {
     display: block;
     text-align: center;
+    order: 2;
 
     .col-xs-12 {
       padding-bottom: 6rem;
@@ -478,11 +480,11 @@ $extrasmall-screen: 767px;
 
     margin-bottom: 3rem;
     font-size: 1.7rem;
-    color: #6d1f1f;
+    color: $font-1;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .all-services {
     .container {
       flex-direction: column;
@@ -493,9 +495,15 @@ $extrasmall-screen: 767px;
     }
   }
 
+  .small-and-up {
+    order: 2;
+  }
+
   .about-us {
     &__text-wrapper {
       padding: 0;
+      order: 1;
+      padding-bottom: 2rem;
 
       h2 {
         font-size: 2rem;

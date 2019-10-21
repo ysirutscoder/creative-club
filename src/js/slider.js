@@ -36,7 +36,7 @@ var slider = function (sliderElement) {
         setTimeout(function() {
           isChanging = false;
           window.location.hash = document.querySelector('[data-slider-index="' + currentSlide + '"]').id;
-        }, 200);
+        }, 400);
       }
     });
 
@@ -71,8 +71,9 @@ var slider = function (sliderElement) {
         var touch = e.touches[0] || e.changedTouches[0];
         touchStartPos = touch.pageY;
       }
-    });
+    }, {passive: false});
     document.addEventListener('touchend', function (e) {
+      e.preventDefault();
       if (e.type == 'touchstart' || e.type == 'touchmove' || e.type == 'touchend' || e.type == 'touchcancel') {
         var touch = e.touches[0] || e.changedTouches[0];
         touchStopPos = touch.pageY;
