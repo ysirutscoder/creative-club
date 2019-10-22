@@ -83,5 +83,3 @@ if( window.screen.width > 1199 ) {
     document.body.style.overflowY = 'scroll';
     document.body.style.backgroundColor ='#fbf9ed';
 }
-
-// $(document).ready(function(){ $('.slider').bxSlider(); }); 

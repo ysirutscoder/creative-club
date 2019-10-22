@@ -1,0 +1,14 @@
+section.contact-page#slide3
+    .contact-page__inner
+        .contact-page__form
+            h2.contact-page__title Contact Us
+            form(action="POST")
+                label(for="firstname").contact-page__label Your name *
+                .contact-page__names
+                    input(type="text" name="firstname" placeholder="First name" autocomplete="on" required).contact-page__input-name
+                    input(type="text" name="lastname" placeholder="Last name" autocomplete="on" required).contact-page__input-surname
+                label(for="firstname").contact-page__label Email address *
+                input(type="email", name="email" placeholder="Eg. example@email.com" autocomplete="on" required).contact-page__input-email
+                label(for="firstname").contact-page__label Message *
+                textarea(name="textarea" required placeholder="Enter your comments...").contact-page__message
+                button(type="submit").contact-page__btn Submit
