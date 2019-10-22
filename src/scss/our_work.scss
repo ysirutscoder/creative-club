@@ -2,12 +2,18 @@
 @import 'mixins/font-mixins.scss';
 
 .our-work {
+    display:flex;
+    flex-direction: row;
     width: 100%;
     height: 100vh;
     margin: 0;
     padding: 0;
     background-color: $back-color;
     @include font-stm;
+
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+    }
 
     &__inner {
         width: 100%;
@@ -20,6 +26,12 @@
     }
 
     &__description {
+        width: 50%;
+
+        @media screen and (max-width: 767px) {
+            width:100%;
+        }
+
         h3 {
             font-size: 3.5rem;
             color: $font-2;
@@ -30,5 +42,11 @@
             font-size: 1.5rem;
 
         }
+    }
+
+    &__examples{
+        width:40%;
+
+
     }
 }
