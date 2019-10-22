@@ -3737,3 +3737,15 @@
     right: 40px;
   }
 }
+
+@keyframes card-text {
+  0%{
+    opacity:0;
+    color:lightgray;
+  }
+  100%{
+    opacity: 1;
+    color:black;
+  }
+
+}
