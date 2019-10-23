@@ -52,17 +52,17 @@ $(document).ready(function($) {
 });
 
 $('.navbar__hamburger').click(e => {
-    e.preventDefault();
     $('.navbar__right-side').toggleClass('navbar__right-side--visible');
     $('.navbar__hamburger').toggleClass('navbar__hamburger--close');
 });
 
 
 
-$('.navbar__item').click( e => {
-    e.preventDefault();
-    $('.navbar__right-side').removeClass('navbar__right-side--visible');
-    $('.navbar__hamburger').removeClass('navbar__hamburger--close');
+document.querySelectorAll('.navbar__item').forEach(item => {
+    item.addEventListener('click', e => {
+        document.querySelector('.navbar__right-side').classList.remove('navbar__right-side--visible');
+        document.querySelector('.navbar__hamburger').classList.remove('navbar__hamburger--close');
+    })
 })
 
 if( window.screen.width > 1199 ) {

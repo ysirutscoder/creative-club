@@ -112,3 +112,28 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .contact-page {
+        &__inner {
+            padding-top: 50px;
+            width: 90%;
+
+        }
+
+        &__names {
+            flex-direction: column;
+        }
+
+        &__input {
+            &-name {
+                width: 100%;
+                margin-right: 0;
+            }
+
+            &-surname {
+                width: 100%;
+            }
+        }
+    }
+}

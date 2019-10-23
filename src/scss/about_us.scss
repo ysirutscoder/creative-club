@@ -489,7 +489,7 @@ $extrasmall-screen: 767px;
     .container {
       flex-direction: column;
       width: 100%;
-      padding: 0 35px;
+      padding: 0 30px;
       padding-top: 120px;
       max-width: unset;
     }
@@ -517,16 +517,16 @@ $extrasmall-screen: 767px;
 }
 
 .show-on-scroll {
-    opacity:0;
-    transition: transform 5s .5s cubic-bezier(0,1,.3,1), opacity .9s .5s ease-out;
+  opacity: 0;
+  transition: transform 5s .5s cubic-bezier(0, 1, .3, 1), opacity .9s .5s ease-out;
 }
 
 .is-visible {
- opacity:1;
+  opacity: 1;
 }
 
 @media screen and (max-width:767px) {
-    #slide1 {
-        height:auto;
-    }
+  #slide1 {
+    height: auto;
+  }
 }
